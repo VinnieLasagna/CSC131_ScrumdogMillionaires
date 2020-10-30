@@ -1,3 +1,5 @@
+package sample;
+
 //import org.json.simple.JSONObject;
 
 //import java.io.BufferedReader;
@@ -11,6 +13,6 @@ import org.json.simple.parser.ParseException;
 import org.json.simple.parser.JSONParser;
 
 public MovieSearch
-        {
-
-        }
+{
+	
+}
