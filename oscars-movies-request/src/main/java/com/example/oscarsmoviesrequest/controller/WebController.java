@@ -16,8 +16,10 @@ public class WebController {
 	public GetResponse Get(@RequestParam(value = "name",
 	defaultValue = "Robot") String name) {
 		GetResponse response = new GetResponse();
-		response.setId(1);
-		response.setMessage("Your name is "+name);
+		//response.setId(1);
+		//response.setMessage("Your name is "+name);
+		response.setMessage("[" + response.getYear() + ", " + response.getCategory()
+				+ ", " + response.getWinner() + ", " + response.getEntity() + "]");
 		return response;
 
 	}
@@ -25,9 +27,15 @@ public class WebController {
 	@RequestMapping(value = "/post", method = RequestMethod.POST)
 	public PostResponse Post(@RequestBody PostRequest inputPayload) {
 		PostResponse response = new PostResponse();
-		response.setId(inputPayload.getId()*100);
-		response.setMessage("Hello " + inputPayload.getName());
-		response.setExtra("Some text");
+		//response.setId(inputPayload.getId());
+		//response.setMessage("Hello " + inputPayload.getName());
+		//response.setExtra("Some text");
+		response.setMessage("Implemented [" + response.getYear() + ", " + response.getCategory()
+		+ ", " + response.getWinner() + ", " + response.getEntity() + "]");
+		response.setCategory(inputPayload.getCategory());
+		response.setEntity(inputPayload.getEntity());
+		response.setWinner(inputPayload.getWinner());
+		response.setYear(inputPayload.getYear());
 		return response;
 	}
 }
