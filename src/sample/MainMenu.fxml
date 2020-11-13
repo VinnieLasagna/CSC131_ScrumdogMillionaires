@@ -13,63 +13,63 @@
 <?import javafx.scene.text.Font?>
 
 <VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
-  <children>
-    <MenuBar VBox.vgrow="NEVER">
-      <menus>
-        <Menu mnemonicParsing="false" text="File">
-          <items>
-            <MenuItem mnemonicParsing="false" text="New" />
-            <MenuItem mnemonicParsing="false" text="Open…" />
-            <Menu mnemonicParsing="false" text="Open Recent" />
-            <SeparatorMenuItem mnemonicParsing="false" />
-            <MenuItem mnemonicParsing="false" text="Close" />
-            <MenuItem mnemonicParsing="false" text="Save" />
-            <MenuItem mnemonicParsing="false" text="Save As…" />
-            <MenuItem mnemonicParsing="false" text="Revert" />
-            <SeparatorMenuItem mnemonicParsing="false" />
-            <MenuItem mnemonicParsing="false" text="Preferences…" />
-            <SeparatorMenuItem mnemonicParsing="false" />
-            <MenuItem mnemonicParsing="false" text="Quit" />
-          </items>
-        </Menu>
-        <Menu mnemonicParsing="false" text="Edit">
-          <items>
-            <MenuItem mnemonicParsing="false" text="Undo" />
-            <MenuItem mnemonicParsing="false" text="Redo" />
-            <SeparatorMenuItem mnemonicParsing="false" />
-            <MenuItem mnemonicParsing="false" text="Cut" />
-            <MenuItem mnemonicParsing="false" text="Copy" />
-            <MenuItem mnemonicParsing="false" text="Paste" />
-            <MenuItem mnemonicParsing="false" text="Delete" />
-            <SeparatorMenuItem mnemonicParsing="false" />
-            <MenuItem mnemonicParsing="false" text="Select All" />
-            <MenuItem mnemonicParsing="false" text="Unselect All" />
-          </items>
-        </Menu>
-        <Menu mnemonicParsing="false" text="Help">
-          <items>
-            <MenuItem mnemonicParsing="false" text="About MyHelloApp" />
-          </items>
-        </Menu>
-      </menus>
-    </MenuBar>
-    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" style="-fx-background-color: DARKRED;" VBox.vgrow="ALWAYS">
-      <children>
-            <Pane layoutY="273.0" prefHeight="154.0" prefWidth="651.0" style="-fx-background-color: DARKBLUE;" />
-            <Label layoutX="32.0" layoutY="14.0" text="[ THE OSCARS PROJECT ]" textFill="WHITE">
-               <font>
-                  <Font name="Arial Rounded MT Bold" size="18.0" />
-               </font></Label>
-            <TextField layoutX="187.0" layoutY="128.0" prefHeight="25.0" prefWidth="260.0" promptText="Search Films" />
-            <TextField layoutX="230.0" layoutY="202.0" promptText="Filter by Category" />
-            <Button id="menuSearchButton" fx:id="menuSearchButton" layoutX="425.0" layoutY="128.0" mnemonicParsing="false" onAction="#handleMenuSearchButton" text="▷" />
-            <Button layoutX="357.0" layoutY="201.0" mnemonicParsing="false" text="▷" />
-            <Label layoutX="286.0" layoutY="178.0" text="- OR -" textFill="WHITE">
-               <font>
-                  <Font name="Berlin Sans FB" size="14.0" />
-               </font>
-            </Label>
-      </children>
-    </AnchorPane>
-  </children>
+    <children>
+        <MenuBar VBox.vgrow="NEVER">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="New" />
+                        <MenuItem mnemonicParsing="false" text="Open…" />
+                        <Menu mnemonicParsing="false" text="Open Recent" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Close" />
+                        <MenuItem mnemonicParsing="false" text="Save" />
+                        <MenuItem mnemonicParsing="false" text="Save As…" />
+                        <MenuItem mnemonicParsing="false" text="Revert" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Preferences…" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Quit" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Undo" />
+                        <MenuItem mnemonicParsing="false" text="Redo" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Cut" />
+                        <MenuItem mnemonicParsing="false" text="Copy" />
+                        <MenuItem mnemonicParsing="false" text="Paste" />
+                        <MenuItem mnemonicParsing="false" text="Delete" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Select All" />
+                        <MenuItem mnemonicParsing="false" text="Unselect All" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="About MyHelloApp" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" style="-fx-background-color: DARKRED;" VBox.vgrow="ALWAYS">
+            <children>
+                <Pane layoutY="273.0" prefHeight="154.0" prefWidth="651.0" style="-fx-background-color: DARKBLUE;" />
+                <Label layoutX="32.0" layoutY="14.0" text="[ THE OSCARS PROJECT ]" textFill="WHITE">
+                    <font>
+                        <Font name="Arial Rounded MT Bold" size="18.0" />
+                    </font></Label>
+                <TextField layoutX="187.0" layoutY="128.0" prefHeight="25.0" prefWidth="260.0" promptText="Search Films" />
+                <TextField layoutX="230.0" layoutY="202.0" promptText="Filter by Category" />
+                <Button id="menuSearchButton" fx:id="menuSearchButton" layoutX="425.0" layoutY="128.0" mnemonicParsing="false" onAction="#handleMenuSearchButton" text="▷" />
+                <Button layoutX="357.0" layoutY="201.0" mnemonicParsing="false" text="▷" />
+                <Label layoutX="286.0" layoutY="178.0" text="- OR -" textFill="WHITE">
+                    <font>
+                        <Font name="Berlin Sans FB" size="14.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+    </children>
 </VBox>
