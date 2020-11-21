@@ -10,61 +10,37 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.example.oscarsmoviesrequest.models.PostRequest;
 import com.example.oscarsmoviesrequest.models.PostResponse;
-import com.example.oscarsmoviesrequest.FillList;
+import com.example.oscarsmoviesrequest.FillRequests;
 import com.example.oscarsmoviesrequest.models.GetResponse;
 
 @RestController
 public class WebController {
-
-	@Autowired
-	private FillList fillList;
 	
-	//change Get method parameters to the category filtered
-	//original copy of Get method
-	/*@RequestMapping("/get")
-	public GetResponse Get(@RequestParam(value = "name",
-	defaultValue = "Robot") String name) {
+	@RequestMapping(value = "/get", method = RequestMethod.GET)
+	public GetResponse Get(String year_film, String year_ceremony, String ceremony, 
+			@RequestParam(value = "category",defaultValue = "all") String category, String name, String film, String winner) {
 		GetResponse response = new GetResponse();
 		//response.setId(1);
-		//response.setMessage("Your name is "+name);
-		response.setMessage("[" + response.getYear() + ", " + response.getCategory()
-				+ ", " + response.getWinner() + ", " + response.getEntity() + "]");
-		return response;
-
-	}*/
-	
-	//Test copy of Get method
-	@GetMapping("/user")
-	public GetResponse Get(@RequestParam(value = "year") long year, String category, boolean winner, String entity) {
-		GetResponse response = new GetResponse();
-		//response.setId(1);
-		//response.setMessage("Your name is "+name);
-		System.out.print(year + " ");
-		System.out.print(category + " ");
-		System.out.print(winner + " ");
-		System.out.println(entity + " ");
-		System.out.println("Got here");
-		
+		//response.setMessage("Your name is "+name);		
+		response.setYearFilm(year_film);
+		response.setYearCeremony(year_ceremony);
+		response.setCeremony(ceremony);
 		response.setCategory(category);
-		response.setEntity(entity);
+		response.setName(name);
+		response.setFilm(film);
 		response.setWinner(winner);
-		response.setYear(year);
-		response.setMessage("Got [" + response.getYear() + ", " + response.getCategory()
-				+ ", " + response.getWinner() + ", " + response.getEntity() + "]");
+		response.setMessage("Got [" + response.getYearFilm() + ", " + response.getYearCeremony() + ", " + response.getCeremony()
+				+ ", " + response.getCategory() + ", " + response.getName() + ", " + response.getFilm() + ", " + response.getWinner() + "]");
 		return response;
 
 	}
 	
-	@RequestMapping("/user/category")
+	/*@RequestMapping("/get/category")
 	public GetResponse GetByCategory(@PathVariable("category") String category) {
 		GetResponse response = new GetResponse();
 		//response.setId(1);
 		//response.setMessage("Your name is "+name);
 		//System.out.print(year + " ");
-		System.out.print(category + " ");
-		//System.out.print(winner + " ");
-		//System.out.println(entity + " ");
-		System.out.println("Got here");
 		
 		response.setCategory(category);
 		//response.setEntity(entity);
@@ -75,37 +51,28 @@ public class WebController {
 		//		+ ", " + response.getWinner() + ", " + response.getEntity() + "]");
 		return response;
 
-	}
+	}*/
 	
-	@RequestMapping(value = "/user", method = RequestMethod.POST)
+	@RequestMapping(value = "/post", method = RequestMethod.POST)
 	public PostResponse Post(@RequestBody PostRequest inputPayload) {			//change this method to using array
 		PostResponse response = new PostResponse();
 		//response.setId(inputPayload.getId());
 		//response.setMessage("Hello " + inputPayload.getName());
 		//response.setExtra("Some text");
-		response.setCategory(inputPayload.getCategory());
-		response.setEntity(inputPayload.getEntity());
-		response.setWinner(inputPayload.getWinner());
-		response.setYear(inputPayload.getYear());
-		response.setMessage("Implemented [" + response.getYear() + ", " + response.getCategory()
-		+ ", " + response.getWinner() + ", " + response.getEntity() + "]");
+		response.setYearFilm(inputPayload.year_film);
+		response.setYearCeremony(inputPayload.year_ceremony);
+		response.setCeremony(inputPayload.ceremony);
+		response.setCategory(inputPayload.category);
+		response.setName(inputPayload.name);
+		response.setFilm(inputPayload.film);
+		response.setWinner(inputPayload.winner);
+		//response.setCategory(inputPayload.getCategory());
+		//response.setEntity(inputPayload.getEntity());
+		//response.setWinner(inputPayload.getWinner());
+		//response.setYear(inputPayload.getYear());
+		//response.setMessage("Implemented [" + response.getYear() + ", " + response.getCategory()
+		//+ ", " + response.getWinner() + ", " + response.getEntity() + "]");
 		
 		return response;
 	}
-	
-	/*@RequestMapping(value = "/post", method = RequestMethod.POST)
-	public PostResponse PostCheck(@RequestBody PostRequest inputPayload) {			//change this method to using array
-		PostResponse response = new PostResponse();
-		//response.setId(inputPayload.getId());
-		//response.setMessage("Hello " + inputPayload.getName());
-		//response.setExtra("Some text");
-		response.setCategory(inputPayload.getCategory());
-		response.setEntity(inputPayload.getEntity());
-		response.setWinner(inputPayload.getWinner());
-		response.setYear(inputPayload.getYear());
-		response.setMessage("Implemented [" + response.getYear() + ", " + response.getCategory()
-		+ ", " + response.getWinner() + ", " + response.getEntity() + "]");
-		
-		return response;
-	}*/
 }

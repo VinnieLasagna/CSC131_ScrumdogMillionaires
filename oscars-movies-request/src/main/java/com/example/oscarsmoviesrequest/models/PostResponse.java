@@ -2,12 +2,39 @@ package com.example.oscarsmoviesrequest.models;
 
 public class PostResponse {
 	//int id;
-	String message;
 	//String extra;
+	String message;	
+	long year_film;
+	long year_ceremony;
+	long ceremony;	
 	String category;
-	String entity;
+	String name;
+	String film;
 	boolean winner;
-	long year;
+	
+	public long getYearFilm() {
+		return year_film;
+	}
+	
+	public void setYearFilm(long year_film) {
+		this.year_film = year_film;
+	}
+	
+	public long getYearCeremony() {
+		return year_ceremony;
+	}
+	
+	public void setYearCeremony(long year_ceremony) {
+		this.year_ceremony = year_ceremony;
+	}
+	
+	public long getCeremony() {
+		return ceremony;
+	}
+	
+	public void setCeremony(long ceremony) {
+		this.ceremony = ceremony;
+	}
 	
 	public String getCategory() {
 		return category;
@@ -17,28 +44,28 @@ public class PostResponse {
 		this.category = category;
 	}
 	
-	public String getEntity() {
-		return entity;
+	public String getName() {
+		return name;
 	}
 
-	public void setEntity(String entity) {
-		this.entity = entity;
+	public void setName(String name) {
+		this.name = name;
 	}
 
+	public String getFilm() {
+		return film;
+	}
+
+	public void setFilm(String film) {
+		this.film = film;
+	}
+	
 	public boolean getWinner() {
 		return winner;
 	}
 
 	public void setWinner(boolean winner) {
 		this.winner = winner;
-	}
-	
-	public long getYear() {
-		return year;
-	}
-	
-	public void setYear(long year) {
-		this.year = year;
 	}
 	
 	/*public String getExtra() {

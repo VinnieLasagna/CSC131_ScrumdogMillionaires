@@ -1,11 +1,15 @@
 package com.example.oscarsmoviesrequest.models;
 public class GetResponse {
-	private String message;
-	private String category;
-	private String entity;
-	private boolean winner;
-	private long year;
 	//private long id;
+	private String message;
+	String year_film;
+	String year_ceremony;
+	String ceremony;	
+	String category;
+	String name;
+	String film;
+	String winner;
+	
 
 	public String getMessage() {
 		return message;
@@ -13,6 +17,30 @@ public class GetResponse {
 
 	public void setMessage(String message) {
 		this.message = message;
+	}
+	
+	public String getYearFilm() {
+		return year_film;
+	}
+	
+	public void setYearFilm(String year_film) {
+		this.year_film = year_film;
+	}
+	
+	public String getYearCeremony() {
+		return year_ceremony;
+	}
+	
+	public void setYearCeremony(String year_ceremony) {
+		this.year_ceremony = year_ceremony;
+	}
+	
+	public String getCeremony() {
+		return ceremony;
+	}
+	
+	public void setCeremony(String ceremony) {
+		this.ceremony = ceremony;
 	}
 	
 	public String getCategory() {
@@ -23,28 +51,28 @@ public class GetResponse {
 		this.category = category;
 	}
 	
-	public String getEntity() {
-		return entity;
+	public String getName() {
+		return name;
 	}
 
-	public void setEntity(String entity) {
-		this.entity = entity;
+	public void setName(String name) {
+		this.name = name;
 	}
 
-	public boolean getWinner() {
+	public String getFilm() {
+		return film;
+	}
+
+	public void setFilm(String film) {
+		this.film = film;
+	}
+	
+	public String getWinner() {
 		return winner;
 	}
 
-	public void setWinner(boolean winner) {
+	public void setWinner(String winner) {
 		this.winner = winner;
-	}
-	
-	public long getYear() {
-		return year;
-	}
-	
-	public void setYear(long year) {
-		this.year = year;
 	}
 	
 	/*public long getId() {
