@@ -1,0 +1,5 @@
+project\oscarvision\models\PostResponse.class
+project\oscarvision\models\PostRequest.class
+project\oscarvision\models\SampleResponse.class
+project\oscarvision\controller\WebController.class
+project\oscarvision\OscarVisionApplication.class
