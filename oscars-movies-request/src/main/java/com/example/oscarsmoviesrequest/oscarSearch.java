@@ -7,8 +7,12 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
-
-
+import java.util.*;
+import org.json.*;
+import org.json.simple.JSONObject;
+import org.json.simple.JSONArray;
+import org.json.simple.parser.ParseException;
+import org.json.simple.parser.JSONParser;
 import com.opencsv.CSVReader;
 import com.opencsv.exceptions.CsvValidationException;
 import com.example.oscarsmoviesrequest.models.*;
@@ -68,6 +72,24 @@ public class oscarSearch {
     FillRequests fill = new FillRequests();
     //PostRequest[] requests = fill.createPostRequests(result);
     //fill.sendPostRequests(requests);
-	fill.getEntityInfo(result);
+	//ArrayList<String> readSearch = fill.getEntityInfo(result);
+    ArrayList<JSONObject> readSearch = fill.getEntityInfo(result);
+    MovieSearch convert = new MovieSearch();
+    ArrayList<String[]> array = new ArrayList<String[]>();
+    
+    int i = 0;
+    System.out.println("JSON converted to string:");
+	for(JSONObject search: readSearch) {
+		System.out.println(search.toString());
+		String jsonString = search.toJSONString();
+		ArrayList<String> strings = new ArrayList<String>();
+		JSONArray jsonArray = new JSONArray();
+		jsonArray.add(jsonString);
+		//array.add(convert.convertToStringArray(search,readSearch.size()));
+	}
+	
+	//for(String temp[]: array) {
+	//	System.out.println(Arrays.toString(temp));
+	//}
   }
 }

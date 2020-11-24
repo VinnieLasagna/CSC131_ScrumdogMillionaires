@@ -2,6 +2,8 @@ package com.example.oscarsmoviesrequest.controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.apache.tomcat.websocket.Util;
+import org.json.simple.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -10,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.example.oscarsmoviesrequest.models.PostRequest;
 import com.example.oscarsmoviesrequest.models.PostResponse;
+import com.google.gson.Gson;
 import com.example.oscarsmoviesrequest.FillRequests;
 import com.example.oscarsmoviesrequest.models.GetResponse;
 
@@ -17,7 +20,7 @@ import com.example.oscarsmoviesrequest.models.GetResponse;
 public class WebController {
 	
 	@RequestMapping(value = "/get", method = RequestMethod.GET)
-	public GetResponse Get(String year_film, String year_ceremony, String ceremony, 
+	public JSONObject Get(String year_film, String year_ceremony, String ceremony, 
 			@RequestParam(value = "category",defaultValue = "all") String category, String name, String film, String winner) {
 		GetResponse response = new GetResponse();
 		//response.setId(1);
@@ -29,9 +32,15 @@ public class WebController {
 		response.setName(name);
 		response.setFilm(film);
 		response.setWinner(winner);
+		//System.out.println("Response: " + response);
 		response.setMessage("Got [" + response.getYearFilm() + ", " + response.getYearCeremony() + ", " + response.getCeremony()
 				+ ", " + response.getCategory() + ", " + response.getName() + ", " + response.getFilm() + ", " + response.getWinner() + "]");
-		return response;
+		//String json = response.toJson(response);
+		Gson gson = new Gson();
+		String json = gson.toJson(response);
+		JSONObject jsonObject = new Gson().fromJson(json, JSONObject.class);
+		//JSONObject json = Util.parseJson(response);
+		return jsonObject;
 
 	}
 	

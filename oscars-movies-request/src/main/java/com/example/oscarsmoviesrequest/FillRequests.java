@@ -10,7 +10,10 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
-
+import org.json.simple.JSONObject;
+import org.json.simple.JSONArray;
+import org.json.simple.parser.ParseException;
+import org.json.simple.parser.JSONParser;
 import com.example.oscarsmoviesrequest.models.GetResponse;
 import com.example.oscarsmoviesrequest.models.Post;
 import com.example.oscarsmoviesrequest.models.PostRequest;
@@ -116,12 +119,22 @@ public class FillRequests {
 		}
 	}
 	*/
-	public void getEntityInfo(ArrayList<String[]> requests) {			//using ArrayList from oscarSearch as parameter	
+	public ArrayList<JSONObject> getEntityInfo(ArrayList<String[]> requests) {
+	//public ArrayList<String> getEntityInfo(ArrayList<String[]> requests) {			//using ArrayList from oscarSearch as parameter	
+		//ArrayList<String> results = new ArrayList<String>();
+		ArrayList<JSONObject> results = new ArrayList<JSONObject>();
 		for (int i = 0; i < requests.size(); i++) {
-			String[] request = requests.get(i);
-			GetResponse tester = webController.Get(request[0],request[1],request[2],request[3],request[4],request[5],request[6]);
-			System.out.println(tester.getMessage());
+			String[] request = requests.get(i); //change GetResponse into JSON object
+			//JSONObject request = requests.get(i);
+			//parse JSONObject into array form
+			//MovieSearch convertToArray = new MovieSearch();
+			//String[] request = convertToArray.parse();
+			//String jsonString = webController.Get(request[0],request[1],request[2],request[3],request[4],request[5],request[6]);
+			JSONObject jsonString = webController.Get(request[0],request[1],request[2],request[3],request[4],request[5],request[6]);
+			//System.out.println(jsonString);
+			results.add(jsonString);
 		}
+		return results;
 	}
 	
 	public static void main(String[] args) {
