@@ -16,7 +16,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SearchController">
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SearchController">
     <children>
         <MenuBar VBox.vgrow="NEVER">
             <menus>
@@ -62,7 +62,7 @@
                 <Pane layoutY="273.0" prefHeight="213.0" prefWidth="678.0" style="-fx-background-color: DARKBLUE;" AnchorPane.leftAnchor="0.0" />
                 <TabPane layoutX="93.0" layoutY="126.0" opacity="0.67" prefHeight="323.0" prefWidth="499.0" style="-fx-background-color: WHITE;" tabClosingPolicy="UNAVAILABLE">
                     <tabs>
-                        <Tab text="Movie Name">
+                        <Tab id="tab1" fx:id="tab1" text="Movie Name">
                             <content>
                                 <TextArea id="movieTextArea" fx:id="movieTextArea" editable="false" opacity="0.67" prefHeight="200.0" prefWidth="200.0" />
                             </content>
@@ -82,9 +82,9 @@
                 <TextField id="searchField" fx:id="searchField" layoutX="237.0" layoutY="85.0" onKeyReleased="#handleEnterKey" prefHeight="25.0" prefWidth="184.0" promptText="Search Films" />
                 <Button id="searchButton" fx:id="searchButton" layoutX="399.0" layoutY="85.0" mnemonicParsing="false" onAction="#handleSearchButton" text="▷" />
                 <Label layoutX="301.0" layoutY="47.0" text="results for:" textFill="WHITE" />
-                <Label id="displaySearchLabel" fx:id="displaySearchLabel" alignment="CENTER" layoutX="315.0" layoutY="64.0" text="Label" textFill="WHITE" visible="false" />
+                <Label id="displaySearchLabel" fx:id="displaySearchLabel" alignment="CENTER" layoutX="284.0" layoutY="64.0" prefHeight="17.0" prefWidth="97.0" text="movie name" textAlignment="CENTER" textFill="WHITE" visible="false" />
             </children>
         </AnchorPane>
-        <ListView id="movieLIst" fx:id="movieList" prefHeight="200.0" prefWidth="200.0" />
+        <ListView id="movieLIst" fx:id="movieList" opacity="0.67" prefHeight="200.0" prefWidth="200.0" />
     </children>
 </VBox>
