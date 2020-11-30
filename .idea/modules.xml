@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/CSC131_ScrumdogMillionaires.iml" filepath="$PROJECT_DIR$/.idea/CSC131_ScrumdogMillionaires.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CSC131_ScrumdogMillionaires.iml" filepath="$PROJECT_DIR$/CSC131_ScrumdogMillionaires.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OscarVision/OscarVision.iml" filepath="$PROJECT_DIR$/OscarVision/OscarVision.iml" />
     </modules>
   </component>
 </project>
