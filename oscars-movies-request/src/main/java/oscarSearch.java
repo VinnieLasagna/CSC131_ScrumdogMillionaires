@@ -13,7 +13,7 @@ import com.opencsv.exceptions.CsvValidationException;
 public class oscarSearch {
 
   public static void main(String[] args) throws CsvValidationException, IOException, FileNotFoundException {
-    
+
     /*DECLARE STRUCTURES*/
     CSVReader reader = new CSVReader(new FileReader("oscarData.csv"));  //object for CSV operations
     String[] nextLine;                                                  //temp storage for line being read
@@ -24,7 +24,7 @@ public class oscarSearch {
 
 /*GET SEARCH PARAM FROM USER*/
     Scanner input = new Scanner(System.in);
-    
+
     /*FIND WHICH COLUMN WE WILL SEARCH*/
     /*LOOPS UNTIL EITHER 1, 2, OR 3 ARE ENTERED*/
     do {
@@ -43,12 +43,12 @@ public class oscarSearch {
         searchParam = -1;
       }
     }while(searchParam < 0);
-    
+
     /*GET STRING TO SEARCH FOR*/
     input.nextLine();
     System.out.println("Enter search : ");
     String searchWord = input.nextLine();
-    
+
     /*ONLY SEE WINNERS?*/
     /*LOOPS UNTIL INPUT IS CORRECT*/
     do {
@@ -59,7 +59,7 @@ public class oscarSearch {
       }
     }while(filter != 'y' && filter != 'n' && filter != 'Y' && filter != 'N');
     input.close();
-        
+
     /*THE SEARCH*/
     while((nextLine = reader.peek()) != null) {                         //peeks next line without advancing iterator
       if(filterWin) {
@@ -67,7 +67,7 @@ public class oscarSearch {
           result.add(reader.readNext());                                //populate result List
         } else {
           reader.skip(1);
-        } 
+        }
       }else {
         if(nextLine[searchParam].equalsIgnoreCase(searchWord)) {          //if category matches search
           result.add(reader.readNext());                                  //populate result List
@@ -76,11 +76,11 @@ public class oscarSearch {
         }
       }
     }
-    
+
     System.out.println(result.size() + " matches found.");
-    
+
     for(String temp[]: result) {
-      
+
       System.out.println(Arrays.toString(temp));
     }
   }
