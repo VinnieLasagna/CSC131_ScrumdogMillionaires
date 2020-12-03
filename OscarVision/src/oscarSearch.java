@@ -135,7 +135,17 @@ public class oscarSearch {
           reader.skip(1);
         }
       }
+    }else {
+      
+      while((nextLine = reader.peek()) != null) {                         //peeks next line without advancing iterator
+        if(StringUtils.containsIgnoreCase(nextLine[3], searchWord)) {          //if category matches search
+            result.add(reader.readNext());                                  //populate result List
+        } else {
+            reader.skip(1);
+        }
+      }
     }
+      
     
     if(filterWin) {
       
