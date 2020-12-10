@@ -7,23 +7,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2a55350a-07ed-428d-83d6-a92aa5d6e992" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/gson_2_8_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/gson_2_8_62.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/opencsv_5_32.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CSC131_ScrumdogMillionaires.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OscarVision/OscarVision.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OscarVision/src/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sample/oscarSearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/CSC131_ScrumdogMillionaires.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/javafx_sdk_15_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/ReadCSV.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/ReadCSV.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/SearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/SearchController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sample/SearchMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/SearchMenu.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/commons_lang3_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/opencsv_5_31.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/MainController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sample/SearchController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/gson_2_8_62.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/opencsv_5_32.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSC131_ScrumdogMillionaires.iml" beforeDir="false" afterPath="$PROJECT_DIR$/CSC131_ScrumdogMillionaires.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KaggleData_the_oscar_award.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/OscarData.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OscarVision/OscarVision.iml" beforeDir="false" afterPath="$PROJECT_DIR$/OscarVision/OscarVision.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSC131_ScrumdogMillionaires/sample/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CSC131_ScrumdogMillionaires/sample/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSC131_ScrumdogMillionaires/sample/MainMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CSC131_ScrumdogMillionaires/sample/MainMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSC131_ScrumdogMillionaires/sample/SearchController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CSC131_ScrumdogMillionaires/sample/SearchController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSC131_ScrumdogMillionaires/sample/datahubio_oscar_data_csv.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CSC131_ScrumdogMillionaires/sample/oscarSearch.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CSC131_ScrumdogMillionaires/sample/oscarSearch.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OscarVision/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OscarVision/oscarSearch.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OscarVision/oscarSearch.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/MainMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/MainMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/datahubio_oscar_data_csv.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/oscarSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/oscarSearch.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,9 +52,15 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../Program Files/Java/opencsv-5.3.jar" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Admin\Desktop\CSC131_ScrumdogMillionaires\src\sample" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="TestMovieApp" type="Application" factoryName="Application">
@@ -81,14 +91,34 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="370" y="130" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1280.680@0.0.1280.680" timestamp="1606710074101" />
-    <state x="348" y="82" key="FileChooserDialogImpl" timestamp="1606709680079">
+    <state x="438" y="216" key="DetectedRootsChooserDialog" timestamp="1607464579520">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="348" y="82" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1606709680079" />
-    <state x="121" y="0" key="SettingsEditor" timestamp="1606709962847">
+    <state x="438" y="216" key="DetectedRootsChooserDialog/0.0.1280.680@0.0.1280.680" timestamp="1607464579520" />
+    <state x="348" y="82" key="FileChooserDialogImpl" timestamp="1607464609989">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="121" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1606709962847" />
+    <state x="348" y="82" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1607464609989" />
+    <state width="1237" height="4" key="GridCell.Tab.0.bottom" timestamp="1607577231338">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="4" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1607577231338" />
+    <state width="1237" height="4" key="GridCell.Tab.0.center" timestamp="1607577231337">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="4" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1607577231337" />
+    <state width="1237" height="4" key="GridCell.Tab.0.left" timestamp="1607577231337">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="4" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1607577231337" />
+    <state width="1237" height="4" key="GridCell.Tab.0.right" timestamp="1607577231337">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="4" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1607577231337" />
+    <state x="121" y="0" key="SettingsEditor" timestamp="1607464613340">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="121" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1607464613340" />
     <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1606710004197">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
