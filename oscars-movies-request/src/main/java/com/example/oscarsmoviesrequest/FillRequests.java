@@ -15,6 +15,7 @@ public class FillRequests {
 	public ArrayList<String[]> postEntityInfo(ArrayList<String[]> requests) {
 		ArrayList<String[]> results = new ArrayList<String[]>();
 
+			/* if returning GetResponse
 		for (int i = 0; i < requests.size(); i++) {
 			String[] request = requests.get(i);
 			String[] fillArray = new String[request.length];
@@ -30,18 +31,22 @@ public class FillRequests {
 			fillArray[6] = json.getWinner();
 
 			results.add(fillArray);
-		}
+		}*/
+		// returning ArrayList<String[]>
+		//results = webController.Get(request[0], request[1], request[2], request[3], request[4], request[5],
+		//		request[6]);
 		return results;
 	}
 
 	public ArrayList<String[]> getEntityInfo(ArrayList<String[]> requests) { // calls GET request and returns
 		ArrayList<String[]> results = new ArrayList<String[]>();
-
+			//requests now contains list of Movies
 		for (int i = 0; i < requests.size(); i++) {
 			String[] request = requests.get(i);
 			String[] fillArray = new String[request.length];
 
 			// calls Get method from WebController and returns JSON results
+			/*
 			GetResponse json = webController.Get(request[0], request[1], request[2], request[3], request[4], request[5],
 					request[6]);
 			fillArray[0] = json.getYearFilm();
@@ -51,7 +56,7 @@ public class FillRequests {
 			fillArray[4] = json.getName();
 			fillArray[5] = json.getFilm();
 			fillArray[6] = json.getWinner();
-
+			*/
 			results.add(fillArray); // adds movie entries to array list
 		}
 		return results;
