@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MainController">
     <children>
         <MenuBar VBox.vgrow="NEVER">
             <menus>
@@ -53,7 +53,7 @@
                 </Menu>
             </menus>
         </MenuBar>
-        <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" style="-fx-background-color: DARKRED;" VBox.vgrow="ALWAYS">
+        <AnchorPane id="rootPane" fx:id="rootPane" maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" style="-fx-background-color: DARKRED;" VBox.vgrow="ALWAYS">
             <children>
                 <Pane layoutY="273.0" prefHeight="154.0" prefWidth="651.0" style="-fx-background-color: DARKBLUE;" />
                 <Label layoutX="32.0" layoutY="14.0" text="[ THE OSCARS PROJECT ]" textFill="WHITE">
@@ -63,7 +63,7 @@
                 <TextField layoutX="187.0" layoutY="128.0" prefHeight="25.0" prefWidth="260.0" promptText="Search Films" />
                 <TextField layoutX="230.0" layoutY="202.0" promptText="Filter by Category" />
                 <Button id="menuSearchButton" fx:id="menuSearchButton" layoutX="425.0" layoutY="128.0" mnemonicParsing="false" onAction="#handleMenuSearchButton" text="▷" />
-                <Button layoutX="357.0" layoutY="201.0" mnemonicParsing="false" text="▷" />
+                <Button id="catButton" fx:id="catButton" layoutX="357.0" layoutY="201.0" mnemonicParsing="false" onAction="#handleMenuSearchButton" text="▷" />
                 <Label layoutX="286.0" layoutY="178.0" text="- OR -" textFill="WHITE">
                     <font>
                         <Font name="Berlin Sans FB" size="14.0" />
