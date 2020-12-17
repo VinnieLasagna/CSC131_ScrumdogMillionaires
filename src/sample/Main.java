@@ -11,7 +11,7 @@ public class Main extends Application {
     }
 
     public void start(Stage primaryStage) throws Exception {
-        Parent root = (Parent)FXMLLoader.load(this.getClass().getResource("SearchMenu.fxml"));
+        Parent root = FXMLLoader.load(this.getClass().getResource("SearchMenu.fxml"));
         primaryStage.setTitle("Oscars Project");
         primaryStage.setScene(new Scene(root, 650.0D, 500.0D));
         primaryStage.setResizable(false);

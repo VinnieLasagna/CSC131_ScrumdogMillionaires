@@ -11,13 +11,14 @@ import java.util.Scanner;
 
 import com.opencsv.CSVReader;
 import com.opencsv.exceptions.CsvValidationException;
+import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.StringUtils;
 
 public class oscarSearch {
 
-    static ArrayList<String[]> catSearch(String searchWord, CSVReader reader, boolean filterWin)
+    public ArrayList<String[]> catSearch(String searchWord, boolean filterWin)
             throws CsvValidationException, IOException, FileNotFoundException{
-
+        CSVReader reader = new CSVReader(new FileReader("C:\\Users\\Admin\\Desktop\\CSC131_ScrumdogMillionaires\\src\\sample\\OscarData.csv"));
         ArrayList<String[]> result = new ArrayList<String[]>();
         String[] nextLine;
 
@@ -158,7 +159,7 @@ public class oscarSearch {
         return result;
     }
 
-    public ArrayList<String[]> search(String searchWord) throws CsvValidationException, IOException, FileNotFoundException
+    public ArrayList<String[]> search(String searchWord, boolean filterWin) throws CsvValidationException, IOException, FileNotFoundException
     {
 
         /*DECLARE STRUCTURES*/
@@ -166,15 +167,12 @@ public class oscarSearch {
         String[] nextLine;                                                  //temp storage for line being read
         ArrayList<String[]> result = new ArrayList<String[]>();             //ArrayList to hold results
         int searchParam;                                                    //indicates whether we search for year, category or title
-        boolean filterWin = false;                                          //controls filter by winners in search
+        //boolean filterWin = false;                                          //controls filter by winners in search
         char filter;                                                        //user input for filter by winner
-
-        /*GET SEARCH PARAM FROM USER*/
-        Scanner input = new Scanner(System.in);
 
         /*FIND WHICH COLUMN WE WILL SEARCH*/
         /*LOOPS UNTIL EITHER 1, 2, OR 3 ARE ENTERED*/
-        do {
+        /*do {
             System.out.println("Would you like to search :");
             System.out.println("                          (1)By year?");
             System.out.println("                          (2)By category?");
@@ -189,45 +187,91 @@ public class oscarSearch {
             }else {
                 searchParam = -1;
             }
-        }while(searchParam < 0);
+        }while(searchParam < 0);*/
 
         /*GET STRING TO SEARCH FOR*/
-        input.nextLine();
-        System.out.println("Enter search : ");
+        //input.nextLine();
+        //System.out.println("Enter search : ");
 
         /*ONLY SEE WINNERS?*/
         /*LOOPS UNTIL INPUT IS CORRECT*/
-        do {
+        /*do {
             System.out.println("Would you like to only see films that won? (y) or (n)");
             filter = input.next().charAt(0);
             if(filter == 'y' || filter == 'Y') {
                 filterWin = true;
             }
         }while(filter != 'y' && filter != 'n' && filter != 'Y' && filter != 'N');
-        input.close();
+        input.close();*/
 
         /*THE SEARCH*/
-        if(searchParam == 3) {
+        //if(searchParam == 3) {
 
-            result = catSearch(searchWord, reader, filterWin);
+            //result = catSearch(searchWord, reader, filterWin);
+        boolean flag = false;
 
-        }else {
-            while((nextLine = reader.peek()) != null) {                         //peeks next line without advancing iterator
-                if(filterWin) {
-                    if(StringUtils.containsIgnoreCase(nextLine[searchParam], searchWord) && Boolean.valueOf(nextLine[6])) {        //if category matches search
-                        result.add(reader.readNext());                                //populate result List
-                    } else {
-                        reader.skip(1);
-                    }
-                }else {
-                    if(StringUtils.containsIgnoreCase(nextLine[searchParam], searchWord)) {          //if category matches search
-                        result.add(reader.readNext());                                  //populate result List
-                    } else {
-                        reader.skip(1);
-                    }
-                }
+             while((nextLine = reader.peek()) != null ) {
+                 //peeks next line without advancing iterator
+
+
+                 if (filterWin) {
+                     //if category matches search
+                     if (StringUtils.containsIgnoreCase(nextLine[5], searchWord) && Boolean.valueOf(nextLine[6]))
+                     {
+                         //result.add(reader.readNext());
+                         for (String[] arr : result)
+                         {
+                             if (StringUtils.containsIgnoreCase(arr[5], nextLine[5]))
+                             {
+                                 flag = true;
+                                 System.out.println(arr[5]);
+                             }
+
+                         }
+                         if (flag)
+                         {
+                            reader.skip(1);
+                            System.out.println("flag is true");
+                             flag = false;
+                         }
+                         else {
+                             result.add(reader.readNext());
+
+                             System.out.println("flag is false");
+                         }
+                     }
+
+                     else {
+                         reader.skip(1);
+                     }
+                 } else {
+                     if (StringUtils.containsIgnoreCase(nextLine[5], searchWord))
+                     {
+                         for (String[] arr : result)
+                         {
+                             if (StringUtils.containsIgnoreCase(arr[5], nextLine[5]))
+                                 flag = true;
+                         }
+                         if (flag)
+                         {
+                             reader.skip(1);
+                             flag = false;
+                         }
+                         else{
+                             result.add(reader.readNext());
+                         }
+
+
+
+
+                     }
+                     else {
+                                reader.skip(1);
+                     }
+                 }
+
+
             }
-        }
 
         System.out.println(result.size() + " matches found.");
 
@@ -239,8 +283,9 @@ public class oscarSearch {
         return result;
     }
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) throws IOException, CsvValidationException {
+        oscarSearch newSearch = new oscarSearch();
+        //newSearch.search("documentary");
 
     }
 }
