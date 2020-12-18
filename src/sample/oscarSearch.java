@@ -159,14 +159,14 @@ public class oscarSearch {
         return result;
     }
 
-    public ArrayList<String[]> search(String searchWord, boolean filterWin) throws CsvValidationException, IOException, FileNotFoundException
+    public ArrayList<String[]> search(String searchWord, boolean filterWin, int searchParam) throws CsvValidationException, IOException, FileNotFoundException
     {
 
         /*DECLARE STRUCTURES*/
         CSVReader reader = new CSVReader(new FileReader("C:\\Users\\Admin\\Desktop\\CSC131_ScrumdogMillionaires\\src\\sample\\OscarData.csv"));  //object for CSV operations
         String[] nextLine;                                                  //temp storage for line being read
         ArrayList<String[]> result = new ArrayList<String[]>();             //ArrayList to hold results
-        int searchParam;                                                    //indicates whether we search for year, category or title
+        int sp = searchParam;//indicates whether we search for year, category or title
         //boolean filterWin = false;                                          //controls filter by winners in search
         char filter;                                                        //user input for filter by winner
 
@@ -216,12 +216,12 @@ public class oscarSearch {
 
                  if (filterWin) {
                      //if category matches search
-                     if (StringUtils.containsIgnoreCase(nextLine[5], searchWord) && Boolean.valueOf(nextLine[6]))
+                     if (StringUtils.containsIgnoreCase(nextLine[sp], searchWord) && Boolean.valueOf(nextLine[6]))
                      {
                          //result.add(reader.readNext());
                          for (String[] arr : result)
                          {
-                             if (StringUtils.containsIgnoreCase(arr[5], nextLine[5]))
+                             if (StringUtils.containsIgnoreCase(arr[sp], nextLine[5]))
                              {
                                  flag = true;
                                  System.out.println(arr[5]);
@@ -245,11 +245,11 @@ public class oscarSearch {
                          reader.skip(1);
                      }
                  } else {
-                     if (StringUtils.containsIgnoreCase(nextLine[5], searchWord))
+                     if (StringUtils.containsIgnoreCase(nextLine[sp], searchWord))
                      {
                          for (String[] arr : result)
                          {
-                             if (StringUtils.containsIgnoreCase(arr[5], nextLine[5]))
+                             if (StringUtils.containsIgnoreCase(arr[sp], nextLine[5]))
                                  flag = true;
                          }
                          if (flag)
